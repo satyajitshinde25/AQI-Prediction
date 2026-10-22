@@ -1,9 +1,10 @@
 /**
  * AirSense Backend API Service Module
- * Handles all network requests to the FastAPI backend at http://127.0.0.1:8000
+ * Connected to live Render backend: https://aqi-prediction-g6us.onrender.com
  */
 
-export const API_BASE_URL = "http://127.0.0.1:8000";
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://aqi-prediction-g6us.onrender.com";
 
 /**
  * Check if the FastAPI backend is running and healthy
@@ -11,7 +12,7 @@ export const API_BASE_URL = "http://127.0.0.1:8000";
 export async function checkBackendHealth() {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 3500);
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
 
     const response = await fetch(`${API_BASE_URL}/health`, {
       method: "GET",

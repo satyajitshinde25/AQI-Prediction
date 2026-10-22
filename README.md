@@ -120,7 +120,7 @@ AQI-Prediction/
    ```bash
    uvicorn backend.main:app --reload --port 8000
    ```
-   *The API will be live at `http://127.0.0.1:8000` with Swagger docs at `http://127.0.0.1:8000/docs`.*
+   *The local API will be live at `http://127.0.0.1:8000` (or use the deployed production backend at `https://aqi-prediction-g6us.onrender.com`).*
 
 ---
 

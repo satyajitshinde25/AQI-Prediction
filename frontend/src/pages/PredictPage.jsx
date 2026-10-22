@@ -528,7 +528,7 @@ export default function PredictPage() {
               <div className="font-bold text-sm">Backend Service Unavailable</div>
               <p className="mt-0.5 text-amber-800 leading-relaxed">{apiError}</p>
               <p className="mt-1 text-[11px] text-amber-700">
-                Ensure the FastAPI backend is running via <code className="bg-white/80 px-1 py-0.5 rounded border font-mono">python -m uvicorn backend.main:app --reload</code> on port 8000.
+                Backend URL: <code className="bg-white/80 px-1 py-0.5 rounded border font-mono">https://aqi-prediction-g6us.onrender.com</code> (Render free instances may take ~30 seconds to wake up if sleeping).
               </p>
             </div>
           </div>
